@@ -1,0 +1,471 @@
+body{
+	color: #f00;
+	font-weight: bold;
+}
+body div{
+	background: rgba(255, 255, 255, 0.5);
+}
+#center
+{
+	width: 95%;
+	margin:0 auto;
+	margin-top: 10px;
+	padding-bottom: 70px;
+}
+table{
+	color: #000;
+	font-weight: normal; 
+	background: #fff;
+	border: 2px solid #f00;	
+}
+table#reg{
+	padding: 1px;
+	position: absolute;
+	left: 442px;
+	top: 515px;
+}
+table#ram{
+	padding: 1px;
+	position: absolute;
+	left: 1062px;
+	top: 670px;
+}
+table#rom{
+	padding: 1px;
+	position: absolute;
+	left: 127px;
+	top:580px;
+}
+
+:-webkit-any(button, input[type='button'], input[type='submit']):not(.custom-appearance):not(.link-button), select, input[type='checkbox'], input[type='radio'] {
+-webkit-appearance: none;
+-webkit-user-select: none;
+background-image: -webkit-linear-gradient(#ededed, #ededed 38%, #dedede);
+border: 1px solid rgba(0, 0, 0, 0.25);
+border-radius: 2px;
+box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(255, 255, 255, 0.75);
+color: #444;
+font: inherit;
+margin: 0 1px 0 0;
+text-shadow: 0 1px 0 rgb(240, 240, 240);
+cursor: pointer;
+}
+:-webkit-any(button, input[type='button'], input[type='submit']):not(.custom-appearance):not(.link-button), select {
+min-height: 2em;
+min-width: 4em;
+padding-bottom: 1px;
+padding: 10px;
+}
+:-webkit-any(button, input[type='button'], input[type='submit']):not(.custom-appearance):not(.link-button) {
+-webkit-padding-end: 10px;
+-webkit-padding-start: 10px;
+}
+:enabled:hover:-webkit-any( select, input[type='checkbox'], input[type='radio'], :-webkit-any( button, input[type='button'], input[type='submit']):not(.custom-appearance):not(.link-button)) {
+background-image: -webkit-linear-gradient(#f0f0f0, #f0f0f0 38%, #e0e0e0);
+border-color: rgba(0, 0, 0, 0.3);
+box-shadow: 0 1px 0 rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(255, 255, 255, 0.95);
+color: black;
+}
+button{
+	position: fixed;
+	right: 0px;
+}
+.halfup{top:145px;}
+.halfd{top:200px;}
+.up{top:255px;}
+.down{top:310px;}
+#clock{top:90px;}
+#ptreg{
+	background: transparent;
+width: 83px;
+height: 225px;
+position: absolute;
+left: 449px;
+top: 414px;
+z-index: 99;
+}
+button span{
+	margin-top: 3px;
+}
+#ptram{
+	background: transparent;
+width: 80px;
+height: 123px;
+position: absolute;
+left: 1069px;
+top: 595px;
+z-index: 99;
+}
+#ptrom{
+	background: transparent;
+width: 58px;
+height: 120px;
+position: absolute;
+left: 142px;
+top: 479px;
+z-index: 99;
+}
+
+#slist{
+	position: absolute;
+	left: 1200px;
+	top: 0px;	
+}
+
+/* IF */
+
+#pc{
+	position: absolute;
+	left: 55px;
+	top: 443px;
+}
+#n_pc{
+	position: absolute;
+	left: 330px;
+	top: 43px;
+}
+
+
+
+/* IR */
+
+#inst{
+	position: absolute;
+	left: 280px;
+	top: 325px;
+}
+#rd1{
+	position: absolute;
+	left: 280px;
+	top: 360px;
+}
+#rs1{
+	position: absolute;
+	left: 290px;
+	top: 431px;
+}
+#rs2{
+	position: absolute;
+	left: 282px;
+	top: 508px;
+}
+#rd2{
+	position: absolute;
+	left: 282px;
+	top: 525px;
+}
+#imme{
+	position: absolute;
+	left: 325px;
+	top: 710px;
+}
+#addr{
+	position: absolute;
+	left: 325px;
+	top: 684px;
+}
+#sa{
+	position: absolute;
+	left: 325px;
+	top: 684px;
+}
+#rna{
+	position: absolute;
+	left: 433px;
+	top:431px;
+}
+#rnb{
+	position: absolute;
+	left: 433px;
+	top:517px;
+}
+#wn{
+	position: absolute;
+	left: 433px;
+	top:545px;
+}
+#d{
+	position: absolute;
+	left: 433px;
+	top:575px;
+}
+#qa{
+	position: absolute;
+	left: 535px;
+	top:443px;
+}
+#qb{
+	position: absolute;
+	left: 535px;
+	top:567px;
+}
+#we{
+	position: absolute;
+	left: 499px;
+	top:389px;
+}
+#sdepend{
+	position: absolute;
+	left: 521px;
+	top:183px;
+}
+#wreg{
+	position: absolute;
+	left: 521px;
+	top:214px;
+}
+#m2reg{
+	position: absolute;
+	left: 521px;
+	top:236px;
+}
+#wmem{
+	position: absolute;
+	left: 521px;
+	top:253px;
+}
+#aluc{
+	position: absolute;
+	left: 521px;
+	top:270px;
+}
+#adepend{
+	position: absolute;
+	left: 521px;
+	top:285px;
+}
+#bdepend{
+	position: absolute;
+	left: 521px;
+	top:302px;
+}
+#wzero{
+	position: absolute;
+	left: 521px;
+	top:323px;
+}
+#wpc{
+	position: absolute;
+	left:330px;
+	top: 151px;
+}
+#wir{
+	position: absolute;
+	left:330px;
+	top: 188px;
+}
+#pcsource{
+	position: absolute;
+	left:480px;
+	top: 155px;
+}
+#sext{
+	position: absolute;
+	left: 433px;
+	top: 662px;
+}
+
+
+
+
+
+/* EXE */
+#a{
+	position: absolute;
+	left: 877px;
+	top: 510px;
+}
+#b{
+	position: absolute;
+	left: 877px;
+	top: 590px;
+}
+#result{
+	position: absolute;
+	left: 920px;
+	top: 556px;
+}
+#esdepend{
+	position: absolute;
+	left: 736px;
+	top:183px;
+}
+#ewreg{
+	position: absolute;
+	left: 736px;
+	top:214px;
+}
+#em2reg{
+	position: absolute;
+	left: 736px;
+	top:236px;
+}
+#ewmem{
+	position: absolute;
+	left: 736px;
+	top:253px;
+}
+#ealuc{
+	position: absolute;
+	left: 736px;
+	top:270px;
+}
+#eadepend{
+	position: absolute;
+	left: 736px;
+	top:285px;
+}
+#ebdepend{
+	position: absolute;
+	left: 736px;
+	top:302px;
+}
+#erd{
+	position: absolute;
+	left: 626px;
+	top: 360px;
+}
+#esa{
+	position: absolute;
+	left: 626px;
+	top: 684px;
+}
+#eimmesa{
+	position: absolute;
+	left: 626px;
+	top: 684px;
+}
+#eqa{
+	position: absolute;
+	left: 626px;
+	top: 443px;
+}
+#eqb{
+	position: absolute;
+	left: 626px;
+	top: 567px;
+}
+
+
+
+
+
+
+/* MEM */
+
+#address{
+	position: absolute;
+	left: 1030px;
+	top: 602px;
+}
+#m_data{
+	position: absolute;
+	left: 1030px;
+	top: 688px;
+}
+#dataout{
+	position: absolute;
+	left: 1125px;
+	top: 598px;
+}
+#msdepend{
+	position: absolute;
+	left: 1085px;
+	top:183px;
+}
+#mwreg{
+	position: absolute;
+	left: 1085px;
+	top:214px;
+}
+#mm2reg{
+	position: absolute;
+	left: 1085px;
+	top:236px;
+}
+#mwmem{
+	position: absolute;
+	left: 1085px;
+	top:253px;
+}
+#mqb{
+	position: absolute;
+	left:973px;
+	top: 684px;
+}
+#mresult{
+	position: absolute;
+	left:973px;
+	top: 556px;
+}
+#mrd{
+	position: absolute;
+	left:973px;
+	top: 360px;
+}
+
+
+
+
+
+
+/* WB */
+
+#wwreg{
+	position: absolute;
+	left: 1175px;
+	top:214px;
+}
+#wm2reg{
+	position: absolute;
+	left: 1175px;
+	top:236px;
+}
+#wrd{
+	position: absolute;
+	left: 1175px;
+	top: 360px;
+}
+#wresult{
+	position: absolute;
+	left: 1175px;
+	top: 556px;
+}
+#wdataout{
+	position: absolute;
+	left: 1175px;
+	top: 609px;
+}
+#pre_d{
+	position: absolute;
+	left: 1231px;
+	top: 874px;
+}
+#wd{
+	position: absolute;
+	left: 1268px;
+	top: 555px;
+}
+
+
+
+#F_inst{
+	text-align: center;
+	width: 148px;
+}
+#D_inst{
+	text-align: center;
+	width: 362px;
+}
+#E_inst{
+	text-align: center;
+	width: 328px;
+}
+#M_inst{
+	text-align: center;
+	width: 160px;
+}
+#W_inst{
+	text-align: center;
+	width: 161px;
+}

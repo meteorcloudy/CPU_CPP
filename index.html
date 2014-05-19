@@ -1,0 +1,181 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>流水线CPU</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	 <script>
+
+	  $(function(){
+	       $(document).ready(function(){
+	       		loadData();
+	       });
+	  });
+
+	  </script>	
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#"  id="F_inst">Link</a></li>
+      <li><a href="#"></a></li>
+      <li class="active"><a href="#"  id="D_inst">Link</a></li>
+      <li><a href="#"></a></li>
+      <li class="active"><a href="#"  id="E_inst">Link</a></li>
+      <li><a href="#"></a></li>
+      <li class="active"><a href="#"  id="M_inst">Link</a></li>
+      <li><a href="#"></a></li>
+      <li class="active"><a href="#"  id="W_inst">Link</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+	<div id="center">
+		<img src="images/CPU.jpg" width="98%" />
+	</div>
+
+  	<button id='slist'><a  href='./signal_list.html'>信号列表</a></button>
+
+	<div id="pc"></div>
+	<div id="n_pc"></div>
+
+	<div id="inst"></div>
+	<div id="rd1" class='rd'></div>
+	<div id="rs1"></div>
+	<div id="rs2"></div>
+	<div id="rd2" class='rd'></div>
+	<div id="imme"></div>
+	<!-- <div id="addr"></div> -->
+	<div id="sa"></div>
+
+	<div id="rna"></div>
+	<div id="rnb"></div>
+	<div id="wn"></div>
+	<div id="d"></div>
+	<div id="qa"></div>
+	<div id="qb"></div>
+	<div id="we" class="wwreg"></div>
+	<div id="sdepend"></div>
+	<div id="wreg"></div>
+	<div id="m2reg"></div>
+	<div id="wmem"></div>
+	<div id="aluc"></div>
+	<div id="adepend"></div>
+	<div id="bdepend"></div>
+	<div id="wzero"></div>
+	<div id="wpc" class='loaddepend'></div>
+	<div id="wir" class='loaddepend'></div>
+	<div id="pcsource"></div>
+	<div id="sext"></div>
+
+
+   	
+	<div id="a"></div>
+	<div id="b"></div>
+	<div id="result"></div>
+	<div id="esdepend"></div>
+	<div id="ewreg"></div>
+	<div id="em2reg"></div>
+	<div id="ewmem"></div>
+	<div id="ealuc"></div>
+	<div id="eadepend"></div>
+	<div id="ebdepend"></div>
+	<div id="erd"></div>
+	<div id="eimmesa" class="eximme"></div>
+	<div id="eqa"></div>
+	<div id="eqb"></div>
+
+	<div id="address" class="mresult"></div>
+	<div id="m_data"></div>
+	<div id="dataout"></div>
+	<div id="msdepend"></div>
+	<div id="mwreg"></div>
+	<div id="mm2reg"></div>
+	<div id="mwmem"></div>
+	<div id="mrd"></div>
+	<div id="mresult"></div>
+	<div id="mqb"></div>
+
+	<div id="wwreg"></div>
+	<div id="wm2reg"></div>
+	<div id="wrd"></div>
+	<div id="wresult"></div>
+	<div id="wdataout"></div>
+	<div id="pre_d"></div>
+	<div class="d" id="wd"></div>
+
+
+
+	<div id="ptreg" onmouseover="setOnBlock('reg')" onclick="setOffBlock('reg')"></div>
+	<div id="ptram" onmouseover="setOnBlock('ram')" onclick="setOffBlock('ram')"></div>
+	<div id="ptrom" onmouseover="setOnBlock('rom')" onclick="setOffBlock('rom')"></div>
+	
+	<table class="table table-bordered" id="reg" style="display:none;">
+		<tr>
+			<td>reg_01</td>
+			<td id='reg_01'></td>
+		</tr>
+		<tr>
+			<td>reg_02</td>
+			<td id='reg_02'></td>
+		</tr>
+		<tr>
+			<td>reg_03</td>
+			<td id='reg_03'></td>
+		</tr>
+		<tr>
+			<td>reg_04</td>
+			<td id='reg_04'></td>
+		</tr>
+		<tr>
+			<td>reg_05</td>
+			<td id='reg_05'></td>
+		</tr>
+	</table>
+	<table class="table table-bordered" id="ram" border="1" style="display:none;">
+		<tr>
+			<td>ram_00</td>
+			<td id='ram_00'></td>
+		</tr>
+		<tr>
+			<td>ram_01</td>
+			<td id='ram_01'></td>
+		</tr>
+		<tr>
+			<td>ram_02</td>
+			<td id='ram_02'></td>
+		</tr>
+		<tr>
+			<td>ram_03</td>
+			<td id='ram_03'></td>
+		</tr>
+		<tr>
+			<td>ram_04</td>
+			<td id='ram_04'></td>
+		</tr>
+	</table>
+
+	<button type="button" class="btn btn-default btn-lg" id="clock">
+  <span class="glyphicon glyphicon-star"></span> CLK <a href="#" id="clk_num"></a> <label id="up_down"></label>
+</button>
+	<button class="halfup" onclick="nextCyc()"><span class="glyphicon glyphicon-arrow-down"></span> 下一个周期</button>
+	<button class="halfd" onclick="preCyc()" ><span class="glyphicon glyphicon-arrow-up"></span> 上一个周期</button>
+	<button class="up" onclick="nextHalfCyc()"><span class="glyphicon glyphicon-chevron-down"></span> 下半个周期</button> 
+	<button class="down" onclick="preHalfCyc()"><span class="glyphicon glyphicon-chevron-up"></span> 上半个周期</button> 
+</body>
+</html>

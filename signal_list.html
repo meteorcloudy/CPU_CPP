@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+ <HEAD>
+  <TITLE> Signal List </TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Access-Control-Allow-Origin" content="info.json">
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <script src="js/jquery.js"></script>
+
+  <script>
+
+  $(function(){
+	//$("#loaddata").click(function(){
+       $(document).ready(function(){
+		//使用getJSON方法读取json数据,
+		//注意：info.json可以是不同类型文件，只要其中的数据为json类型即可
+		$.getJSON('info.json',function(data){
+
+			var html = '<tbody><tr><td></td>';
+
+      for (var key in data[0])
+        html += '<th>'+key+'</th>';
+      html  += '</tr>';
+			$.each(data,function(i,item){
+			html += '<tr><td>'+i+'</td>'
+        for (var key in item)
+          html += '<td>' + item[key]+'</td>';
+      html +='</tr></tbody>';
+			});
+			$('#infotable').html(html); 
+			
+		});
+	});
+  });
+
+  </script>
+ </HEAD>
+<a href="./index.html" ><input type="button" value="返回" id="loaddata" /></a>
+
+ <BODY>
+  <table id="infotable" border="1">
+  
+  </table>
+ </BODY>
+</HTML>
